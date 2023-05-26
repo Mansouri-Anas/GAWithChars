@@ -7,5 +7,5 @@ public class GAUtils {
     public static final double MUTATION_PROBABILITY = 0.5;
     public static final int MAX_ITERATIONS = 10000;
 
-    public static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+    public static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz";
 }
