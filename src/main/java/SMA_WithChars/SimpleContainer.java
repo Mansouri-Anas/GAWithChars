@@ -20,10 +20,5 @@ public class SimpleContainer {
           AgentController islandAgent = agentContainer.createNewAgent("IslandAgent"+i, IslandAgent.class.getName(),new Object[]{});
             islandAgent.start();
         }
-
-
     }
-
-    
-    
 }

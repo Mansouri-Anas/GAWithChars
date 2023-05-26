@@ -8,7 +8,7 @@ import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.domain.FIPAException;
 import jade.lang.acl.ACLMessage;
 
-//pso
+
 public class MasterAgent extends Agent {
     @Override
     protected void setup() {
@@ -34,9 +34,6 @@ public class MasterAgent extends Agent {
             }
         });
     }
-
-
-
     }
 
 

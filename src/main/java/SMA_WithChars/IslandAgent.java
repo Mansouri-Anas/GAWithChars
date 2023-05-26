@@ -108,16 +108,11 @@ public class IslandAgent extends Agent {
             individual2.getChromosome()[i] = population[0].getChromosome()[i];
         }
 
-
-//        System.out.println("Crossover Point : " + crossPoint);
-//        System.out.println("GAWith0and1.Individual 1 : " + Arrays.toString(individual1.getChromosome()));
-//        System.out.println("GAWith0and1.Individual 2 : " + Arrays.toString(individual2.getChromosome()));
     }
 
     public void showPopulation() {
         for (Individual i : population) {
             System.out.println(Arrays.toString(i.getChromosome()) + " = " + i.getFitness());
-//            System.out.println(Arrays.toString(i.getChromosome()));
         }
     }
 
@@ -127,24 +122,16 @@ public class IslandAgent extends Agent {
 
     public void mutation() {
         Random random = new Random();
-        //GAWith0and1.Individual 1
         if (random.nextDouble() > GAWithChars.GAUtils.MUTATION_PROBABILITY) {
             int index = random.nextInt(GAWithChars.GAUtils.CHROMOSOME_SIZE);
-//            individual1.getChromosome()[index]=1-individual1.getChromosome()[index];
             individual1.getChromosome()[index]= GAWithChars.GAUtils.ALPHABET.charAt(random.nextInt(GAWithChars.GAUtils.ALPHABET.length()));
 
         }
-        //GAWith0and1.Individual 2
         if (random.nextDouble() > GAWithChars.GAUtils.MUTATION_PROBABILITY) {
             int index = random.nextInt(GAWithChars.GAUtils.CHROMOSOME_SIZE);
             individual2.getChromosome()[index]= GAWithChars.GAUtils.ALPHABET.charAt(random.nextInt(GAWithChars.GAUtils.ALPHABET.length()));
 
         }
-
-
-//        System.out.println("After Mutation : ");
-//        System.out.println("GAWith0and1.Individual 1 : " + Arrays.toString(individual1.getChromosome()));
-//        System.out.println("GAWith0and1.Individual 2 : " + Arrays.toString(individual2.getChromosome()));
         individual1.calculateFitness();
         individual2.calculateFitness();
         population[GAWithChars.GAUtils.POPULATION_SIZE - 2] = individual1;
